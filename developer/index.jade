@@ -1,0 +1,35 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=Edge,chrome=1")
+    title Фреймворки локализации
+    link(href="css/styles.css", rel="stylesheet")
+    script(data-main="js/presentation", src="js/require.js")  
+  body
+
+    form.go-to-page(action="/select/slide", method="post")
+      firldset
+        input(type="text", maxlength="3", value="", placeholder="1")
+
+    section.progress
+      .value
+
+    section#slides.dark
+
+      article.cover
+
+
+
+      article.contacts.center.i18n-links
+        .wrapper
+          .about-speaker
+            p.name Антон Немцев
+            p.twitter @silentimp
+            p.email thesilentimp@gmail.com
+            p.skype skype: ravencry
+          img.link(src="svg/git.svg", alt="QRCODE cо ссылкой на доклад")
+          p http://github.com/SilentImp/localizaion
+
+
+
