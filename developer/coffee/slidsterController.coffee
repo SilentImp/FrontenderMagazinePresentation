@@ -258,7 +258,10 @@ define ['requestAnimationFramePolyfill'], ()->
         @slides.style[prop] = 'scale(' + scale + ')'
 
     markCurrent: (element)=>
-      @slides.querySelector('.current').classList.remove 'current'
+      current = @slides.querySelector('.current')
+      if current != null
+        current.classList.remove 'current'
+
       element.classList.add 'current'
       @current = element
       before = @allSlidesCount - @slides.querySelectorAll('.current~article').length
