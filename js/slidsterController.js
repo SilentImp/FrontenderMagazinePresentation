@@ -278,8 +278,11 @@
       };
 
       slidsterController.prototype.markCurrent = function(element) {
-        var before;
-        this.slides.querySelector('.current').classList.remove('current');
+        var before, current;
+        current = this.slides.querySelector('.current');
+        if (current !== null) {
+          current.classList.remove('current');
+        }
         element.classList.add('current');
         this.current = element;
         before = this.allSlidesCount - this.slides.querySelectorAll('.current~article').length;
